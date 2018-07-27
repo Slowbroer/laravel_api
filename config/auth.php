@@ -45,10 +45,10 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
-//        'apiUser'=>[
-//            'driver'=>"apiUserGuard",
-//            'provider'=>"api_user"
-//        ]
+        'apiUser'=>[
+            'driver'=>"apiUserGuard",
+            'provider'=>"api_user"
+        ]
     ],
 
     /*
@@ -73,9 +73,9 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-//        "api_user"=>[
-//            'driver' => 'apiUserProvider'
-//        ]
+        "api_user"=>[
+            'driver' => 'apiUserProvider'
+        ]
 
         // 'users' => [
         //     'driver' => 'database',
