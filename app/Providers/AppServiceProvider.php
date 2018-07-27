@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\ApiUserGuard;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -14,6 +16,12 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+//        Auth::extend("apiUserGuard",function (){
+//            return new ApiUserGuard();
+//        });
+//        Auth::provider("apiUserProvider",function (){
+//            return new ApiUserProvider();
+//        });
     }
 
     /**
