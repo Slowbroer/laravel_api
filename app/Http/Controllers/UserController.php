@@ -19,7 +19,7 @@ class UserController extends Controller
 //        die();
         $str = "123456788";
         $res = preg_match("/^[0-9a-f]{32}$/",$str);
-//        var_dump($res);
+        var_dump($res);
     }
 
 }

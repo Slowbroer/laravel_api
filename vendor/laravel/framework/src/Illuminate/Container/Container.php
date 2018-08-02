@@ -10,7 +10,7 @@ use ReflectionParameter;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Container\Container as ContainerContract;
 
-class Container implements ArrayAccess, ContainerContract
+class Container implements ArrayAccess, ContainerContract //实现了ArrayAccess,可以用访问数组一样的方式访问
 {
     /**
      * The current globally available container (if any).
@@ -213,11 +213,6 @@ class Container implements ArrayAccess, ContainerContract
      */
     public function bind($abstract, $concrete = null, $shared = false)
     {
-//        var_dump($abstract);
-//        if($abstract == 'router')
-//        {
-//            var_dump($concrete);
-//        }
         // If no concrete type was given, we will simply set the concrete type to the
         // abstract type. After that, the concrete type to be registered as shared
         // without being forced to state their classes in both of the parameters.
@@ -627,7 +622,6 @@ class Container implements ArrayAccess, ContainerContract
      */
     protected function resolve($abstract, $parameters = [])
     {
-//        var_dump($abstract);
         $abstract = $this->getAlias($abstract);
 
         $needsContextualBuild = ! empty($parameters) || ! is_null(
