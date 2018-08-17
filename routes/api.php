@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::any("/user/info","UserController@login");
+
+Route::any("/bos/test","BosController@test");

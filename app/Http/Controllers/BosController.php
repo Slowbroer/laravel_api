@@ -13,6 +13,18 @@ class BosController extends Controller
 
     public function test(Request $request)
     {
+
+//        $sql = $request->input("sql");
+//        $sql = addslashes($sql);
+//        var_dump($sql);
+//        die();
+
+
+        $para = file_get_contents("php://input");
+//        $para = $request->all();
+        var_dump($para);
+        die();
+
         $bos_sts_config =
             array(
                 'credentials' => array(
@@ -38,7 +50,7 @@ class BosController extends Controller
             'config'=>$bos_sts_config,
             'acl'=>json_encode($acl)
         ]);
-//        $token = json_decode($token,true);
+
         $bos_test_config = array(
             'credentials' => array(
                 'accessKeyId' => $token->accessKeyId,
@@ -51,7 +63,8 @@ class BosController extends Controller
         $bos_client = new BosClient($bos_test_config);
         try{
 //            $bos_string = $bos_client->getObjectAsString("slowbro-test",'test.txt');
-            $bos_string = $bos_client->generatePreSignedUrl("slowbro-test",'test.txt');
+//            $bos_string = $bos_client->generatePreSignedUrl("slowbro-test",'test.txt');
+            $bos_string = $bos_client->listBuckets();
             var_dump($bos_string);
         }
         catch (\Exception $e)

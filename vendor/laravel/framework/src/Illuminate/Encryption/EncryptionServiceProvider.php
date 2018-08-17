@@ -25,6 +25,7 @@ class EncryptionServiceProvider extends ServiceProvider
                 $key = base64_decode(substr($key, 7));
             }
 
+
             return new Encrypter($key, $config['cipher']);
         });
     }

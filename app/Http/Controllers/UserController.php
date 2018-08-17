@@ -11,7 +11,12 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-//        $user = Auth::user();
+        $res = (1==2);
+        var_dump($res);
+        die();
+        $user = Auth::user();
+        var_dump($user);
+
 //        var_dump($user);
 //        echo "111";
 

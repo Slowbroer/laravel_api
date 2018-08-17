@@ -75,6 +75,8 @@ return [
         ],
         "api_user"=>[
             'driver' => 'apiUserProvider'
+//            'driver' => 'eloquent',
+//            'model' => App\ApiUser::class,
         ]
 
         // 'users' => [

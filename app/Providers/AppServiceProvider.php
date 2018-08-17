@@ -16,12 +16,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-//        Auth::extend("apiUserGuard",function (){
-//            return new ApiUserGuard();
-//        });
-//        Auth::provider("apiUserProvider",function (){
-//            return new ApiUserProvider();
-//        });
+        $this->app->
+        Auth::extend("apiUserGuard",function (){
+            return new ApiUserGuard();
+        });
+        Auth::provider("apiUserProvider",function (){
+            return new ApiUserProvider();
+        });
     }
 
     /**
