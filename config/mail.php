@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.qq.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,6 +42,7 @@ return [
     |
     */
 
+//    'port' => env('MAIL_PORT', 587),
     'port' => env('MAIL_PORT', 587),
 
     /*
@@ -56,8 +57,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', '1573975217@qq.com'),
+        'name' => env('MAIL_FROM_NAME', '云岫科技'),
     ],
 
     /*
@@ -71,7 +72,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     /*
     |--------------------------------------------------------------------------
@@ -84,9 +85,18 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('MAIL_USERNAME','1573975217@qq.com'),
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('MAIL_PASSWORD','fpkcirdmxtisfeii'),
+//    'password'=>env("MAIL_PASSWORD",'mj4436549213'),
+
+//    'StreamOptions'=>[
+//        'ssl'=>[
+//            'verify_peer' => false, //是否需要验证 SSL 证书
+//            'verify_peer_name'=>false,//Require verification of peer name.
+//            'allow_self_signed' => true//是否允许自签名证书
+//        ],
+//    ],
 
     /*
     |--------------------------------------------------------------------------
